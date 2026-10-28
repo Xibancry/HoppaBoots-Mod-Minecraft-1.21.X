@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "hoppabootsmod:aluminum_block",
+    "hoppabootsmod:raw_aluminum_block",
+    "hoppabootsmod:aluminum_ore",
+    "hoppabootsmod:aluminum_deepslate_ore"
+  ]
+}
