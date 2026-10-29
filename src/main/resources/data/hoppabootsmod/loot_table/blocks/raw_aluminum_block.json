@@ -11,9 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "hoppabootsmod:raw_aluminum"
+          "name": "hoppabootsmod:raw_aluminum_block"
         }
-      ]
+      ],
+      "rolls": 1.0
     }
-  ]
+  ],
+  "random_sequence": "hoppabootsmod:blocks/raw_aluminum_block"
 }

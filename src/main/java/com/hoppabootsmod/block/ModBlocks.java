@@ -23,19 +23,19 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> ALUMINUM_ORE = registerBlock("aluminum_ore",
             () -> new DropExperienceBlock(UniformInt.of(2, 4), BlockBehaviour.Properties.of()
-            .strength(2.5f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+            .strength(3f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
     public static final RegistryObject<Block> ALUMINUM_DEEPSLATE_ORE = registerBlock("aluminum_deepslate_ore",
             () -> new DropExperienceBlock(UniformInt.of(3, 6), BlockBehaviour.Properties.of()
-                    .strength(3f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+                    .strength(3.5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
 
     public static final RegistryObject<Block> ALUMINUM_BLOCK = registerBlock("aluminum_block",
             () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(2f).requiresCorrectToolForDrops().sound(SoundType.COPPER)));
+                    .strength(3f).requiresCorrectToolForDrops().sound(SoundType.COPPER)));
 
     public static final RegistryObject<Block> RAW_ALUMINUM_BLOCK = registerBlock("raw_aluminum_block",
             () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(2f).requiresCorrectToolForDrops().sound(SoundType.COPPER)));
+                    .strength(3f).requiresCorrectToolForDrops().sound(SoundType.COPPER)));
 
     // Metodo para registrar el nuevo bloque en la lista
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
