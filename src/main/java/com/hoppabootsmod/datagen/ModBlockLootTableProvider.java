@@ -37,11 +37,9 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.RAW_ALUMINUM_BLOCK.get());
 
         this.add(ModBlocks.ALUMINUM_ORE.get(),
-                block -> createMultipleOreDrops(ModBlocks.ALUMINUM_ORE.get(), ModItems.RAW_ALUMINUM.get(),
-                        2, 6));
+                block -> createOreDrop(ModBlocks.ALUMINUM_ORE.get(), ModItems.RAW_ALUMINUM.get()));
         this.add(ModBlocks.ALUMINUM_DEEPSLATE_ORE.get(),
-                block -> createMultipleOreDrops(ModBlocks.ALUMINUM_DEEPSLATE_ORE.get(), ModItems.RAW_ALUMINUM.get(),
-                        2, 6));
+                block -> createOreDrop(ModBlocks.ALUMINUM_DEEPSLATE_ORE.get(), ModItems.RAW_ALUMINUM.get()));
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {
@@ -53,6 +51,12 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                                 .apply(ApplyBonusCount.addOreBonusCount(registrylookup.getOrThrow(Enchantments.FORTUNE)))
                 )
         );
+    }
+
+    // Add new blocks datagen to exising minecraft datagen
+    @Override
+    protected Iterable<Block> getKnownBlocks() {
+        return ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
     }
 
 }
