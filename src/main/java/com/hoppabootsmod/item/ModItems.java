@@ -1,6 +1,7 @@
 package com.hoppabootsmod.item;
 
 import com.hoppabootsmod.HoppaBootsMod;
+import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -21,6 +22,11 @@ public class ModItems {
 
     public static final RegistryObject<Item> WIND_CARTRIDGE = ITEMS.register("wind_cartridge",
             () -> new Item(new Item.Properties()));
+
+    // Declaracion de armor items
+    public static final RegistryObject<Item> ALUMINUM_BOOTS = ITEMS.register("aluminum_boots",
+            () -> new ArmorItem(ModArmorMaterials.ALUMINUM_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(15))));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

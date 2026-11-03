@@ -25,6 +25,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.ALUMINUM_ORE.get());
                         output.accept(ModBlocks.ALUMINUM_DEEPSLATE_ORE.get());
                         output.accept(ModBlocks.ALUMINUM_BLOCK.get());
+                        output.accept(ModItems.ALUMINUM_BOOTS.get());
                     }).build());
 
 

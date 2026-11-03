@@ -31,6 +31,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         super(Set.of(), FeatureFlags.REGISTRY.allFlags(), pRegistries);
     }
 
+    // Provide the loot tables for the new blocks to datagen
     @Override
     protected void generate() {
         dropSelf(ModBlocks.ALUMINUM_BLOCK.get());

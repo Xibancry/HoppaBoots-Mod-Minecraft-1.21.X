@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_refined_aluminum": {
+      "conditions": {
+        "items": [
+          {
+            "items": "hoppabootsmod:refined_aluminum"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "hoppabootsmod:aluminum_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_refined_aluminum"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hoppabootsmod:aluminum_block"
+    ]
+  }
+}

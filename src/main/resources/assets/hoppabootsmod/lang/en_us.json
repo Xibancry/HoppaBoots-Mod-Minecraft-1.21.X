@@ -1,9 +1,15 @@
 {
   "item.hoppabootsmod.raw_aluminum": "Raw Aluminum",
   "block.hoppabootsmod.raw_aluminum_block": "Raw Aluminum Block",
+
   "item.hoppabootsmod.refined_aluminum": "Refined Aluminum",
+
   "block.hoppabootsmod.aluminum_ore": "Aluminum Ore",
   "block.hoppabootsmod.aluminum_deepslate_ore": "Aluminum Deepslate Ore",
+
   "block.hoppabootsmod.aluminum_block": "Aluminum Block",
-  "item.hoppabootsmod.wind_cartridge": "Wind Cartridge"
+
+  "item.hoppabootsmod.wind_cartridge": "Wind Cartridge",
+
+  "item.hoppabootsmod.aluminum_boots": "Aluminum Boots"
 }

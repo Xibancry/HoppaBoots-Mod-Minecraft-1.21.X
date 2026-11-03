@@ -1,6 +1,7 @@
 package com.hoppabootsmod;
 
 import com.hoppabootsmod.block.ModBlocks;
+import com.hoppabootsmod.component.ModDataComponentTypes;
 import com.hoppabootsmod.item.ModCreativeModeTabs;
 import com.hoppabootsmod.item.ModItems;
 import com.mojang.logging.LogUtils;
@@ -38,9 +39,12 @@ public class HoppaBootsMod
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
+        ModCreativeModeTabs.register(modEventBus);
+
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
-        ModCreativeModeTabs.register(modEventBus);
+
+        ModDataComponentTypes.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
