@@ -26,6 +26,6 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.RAW_ALUMINUM.get());
 
         tag(ItemTags.TRIMMABLE_ARMOR)
-                .add(ModItems.ALUMINUM_BOOTS.get());
+                .add(ModItems.HOP_BOOTS.get());
     }
 }

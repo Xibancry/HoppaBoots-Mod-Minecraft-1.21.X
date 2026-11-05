@@ -24,7 +24,7 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
 
     // Declaracion de armor items
-    public static final RegistryObject<Item> ALUMINUM_BOOTS = ITEMS.register("aluminum_boots",
+    public static final RegistryObject<Item> HOP_BOOTS = ITEMS.register("hop_boots",
             () -> new ArmorItem(ModArmorMaterials.ALUMINUM_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(15))));
 

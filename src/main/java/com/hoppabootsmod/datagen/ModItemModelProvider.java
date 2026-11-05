@@ -46,8 +46,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.REFINED_ALUMINUM.get());
         basicItem(ModItems.RAW_ALUMINUM.get());
 
-        // Commented out until a texture is provided in assets
-        // trimmedArmorItem(ModItems.ALUMINUM_BOOTS);
+        trimmedArmorItem(ModItems.HOP_BOOTS);
     }
 
     // Shoutout to El_Redstoniano for making this

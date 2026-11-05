@@ -2,6 +2,7 @@ package com.hoppabootsmod;
 
 import com.hoppabootsmod.block.ModBlocks;
 import com.hoppabootsmod.component.ModDataComponentTypes;
+import com.hoppabootsmod.event.ModEvents;
 import com.hoppabootsmod.item.ModCreativeModeTabs;
 import com.hoppabootsmod.item.ModItems;
 import com.mojang.logging.LogUtils;
@@ -45,6 +46,9 @@ public class HoppaBootsMod
         ModBlocks.register(modEventBus);
 
         ModDataComponentTypes.register(modEventBus);
+
+        // Adds listener to server-sided mod events
+        modEventBus.addListener((FMLCommonSetupEvent event) -> event.enqueueWork(ModEvents::register));
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);

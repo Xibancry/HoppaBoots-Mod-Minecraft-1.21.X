@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.function.Supplier;
 
 public class ModArmorMaterials {
-    public static final Holder<ArmorMaterial> ALUMINUM_ARMOR_MATERIAL = register("alexandrite", Util.make(new EnumMap<>(ArmorItem.Type.class),
+    public static final Holder<ArmorMaterial> ALUMINUM_ARMOR_MATERIAL = register("aluminum", Util.make(new EnumMap<>(ArmorItem.Type.class),
             attribute -> {
                 attribute.put(ArmorItem.Type.BOOTS, 2);
                 attribute.put(ArmorItem.Type.LEGGINGS, 5);
