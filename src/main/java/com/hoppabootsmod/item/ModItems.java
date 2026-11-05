@@ -26,7 +26,11 @@ public class ModItems {
     // Declaracion de armor items
     public static final RegistryObject<Item> HOP_BOOTS = ITEMS.register("hop_boots",
             () -> new ArmorItem(ModArmorMaterials.ALUMINUM_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
-                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(15))));
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(18))));
+
+    public static final RegistryObject<Item> HOPPA_BOOTS = ITEMS.register("hoppa_boots",
+            () -> new ArmorItem(ModArmorMaterials.ALUMINUM_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(20))));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

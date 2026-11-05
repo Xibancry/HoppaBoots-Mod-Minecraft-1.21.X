@@ -47,6 +47,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.RAW_ALUMINUM.get());
 
         trimmedArmorItem(ModItems.HOP_BOOTS);
+        trimmedArmorItem(ModItems.HOPPA_BOOTS);
     }
 
     // Shoutout to El_Redstoniano for making this

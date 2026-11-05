@@ -1,10 +1,13 @@
 package com.hoppabootsmod.datagen;
 
 import com.hoppabootsmod.HoppaBootsMod;
+import com.hoppabootsmod.item.ModBrewing;
+import com.hoppabootsmod.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.loot.LootTableProvider;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;

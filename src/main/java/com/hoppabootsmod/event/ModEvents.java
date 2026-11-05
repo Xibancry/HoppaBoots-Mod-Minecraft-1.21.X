@@ -1,11 +1,15 @@
 package com.hoppabootsmod.event;
 
 import com.hoppabootsmod.HoppaBootsMod;
+import com.hoppabootsmod.item.ModBrewing;
 import com.hoppabootsmod.item.ModItems;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.Items;
+import net.minecraftforge.event.brewing.BrewingRecipeRegisterEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.network.ChannelBuilder;
 import net.minecraftforge.network.NetworkDirection;
@@ -37,6 +41,13 @@ public class ModEvents {
                 player.fallDistance = 0;
             }
         }
+    }
+
+    @SubscribeEvent
+    public static void onRegisterBrewing(BrewingRecipeRegisterEvent event) {
+        event.addRecipe(new ModBrewing(
+                ModItems.HOP_BOOTS.get(), Items.DIAMOND, ModItems.HOPPA_BOOTS.get()
+        ));
     }
 
     public static void register() {

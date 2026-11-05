@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "hoppabootsmod:refined_aluminum"
+    },
+    "B": {
+      "item": "hoppabootsmod:wind_cartridge"
+    },
+    "C": {
+      "item": "minecraft:iron_boots"
+    }
+  },
+  "pattern": [
+    "B B",
+    "ACA",
+    "B B"
+  ],
+  "result": {
+    "count": 1,
+    "id": "hoppabootsmod:hop_boots"
+  }
+}

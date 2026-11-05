@@ -62,8 +62,19 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('C', Items.WIND_CHARGE)
                 .unlockedBy(getHasName(ModItems.REFINED_ALUMINUM.get()), has(ModItems.REFINED_ALUMINUM.get())).save(pRecipeOutput);
 
+        // Recipe for HOP BOOTS
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.HOP_BOOTS.get())
+                .pattern("B B")
+                .pattern("ACA")
+                .pattern("B B")
+                .define('A', ModItems.REFINED_ALUMINUM.get())
+                .define('B', ModItems.WIND_CARTRIDGE.get())
+                .define('C', Items.IRON_BOOTS)
+                .unlockedBy(getHasName(ModItems.WIND_CARTRIDGE.get()), has(ModItems.WIND_CARTRIDGE.get())).save(pRecipeOutput);
+
         // oreSmelting(pRecipeOutput, ALUMINUM_SMELTABLES, RecipeCategory.MISC, ModItems.REFINED_ALUMINUM.get(), 0.25f, 200, "refined_aluminum");
         oreBlasting(pRecipeOutput, ALUMINUM_SMELTABLES, RecipeCategory.MISC, ModItems.REFINED_ALUMINUM.get(), 0.25f, 100, "refined_aluminum");
+        oreBlasting(pRecipeOutput, ALUMINUM_SMELTABLES, RecipeCategory.MISC, ModBlocks.ALUMINUM_BLOCK.get(), 0.25f, 800, "aluminum_block");
     }
 
 //    protected static void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "blocks",
+  "cookingtime": 800,
+  "experience": 0.25,
+  "group": "aluminum_block",
+  "ingredient": {
+    "item": "hoppabootsmod:raw_aluminum"
+  },
+  "result": {
+    "id": "hoppabootsmod:aluminum_block"
+  }
+}
