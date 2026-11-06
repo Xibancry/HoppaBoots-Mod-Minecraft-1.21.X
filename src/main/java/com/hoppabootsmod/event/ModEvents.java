@@ -6,9 +6,11 @@ import com.hoppabootsmod.item.ModItems;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.event.brewing.BrewingRecipeRegisterEvent;
+import net.minecraftforge.event.network.CustomPayloadEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.network.ChannelBuilder;
@@ -37,9 +39,31 @@ public class ModEvents {
             if (player == null) return;
 
             // Server checks for boots being equipped as an anticheat measure
-            if (player.getItemBySlot(EquipmentSlot.FEET).is(ModItems.HOP_BOOTS.get())) {
+            if (player.getItemBySlot(EquipmentSlot.FEET).is(ModItems.HOP_BOOTS.get())
+                    || player.getItemBySlot(EquipmentSlot.FEET).is(ModItems.HOPPA_BOOTS.get())) {
                 player.fallDistance = 0;
             }
+        }
+    }
+
+    public static class SlowFallPacket {
+
+        public SlowFallPacket() {
+        }
+
+        public static void encode(SlowFallPacket msg, FriendlyByteBuf buf) {
+        }
+
+        public static SlowFallPacket decode(FriendlyByteBuf buf) {
+            return new SlowFallPacket();
+        }
+
+        public static void handle(SlowFallPacket msg, CustomPayloadEvent.Context ctx) {
+            ServerPlayer player = ctx.getSender();
+            if (player == null) return;
+
+            boolean wearingBoots = player.getItemBySlot(EquipmentSlot.FEET).is(ModItems.HOPPA_BOOTS.get());
+            player.removeEffect(MobEffects.SLOW_FALLING);
         }
     }
 
@@ -55,6 +79,12 @@ public class ModEvents {
                 .encoder(ResetFallPacket::encode)
                 .decoder(ResetFallPacket::decode)
                 .consumerMainThread(ResetFallPacket::handle)
+                .add();
+
+        CHANNEL.messageBuilder(SlowFallPacket.class, NetworkDirection.PLAY_TO_SERVER)
+                .encoder(SlowFallPacket::encode)
+                .decoder(SlowFallPacket::decode)
+                .consumerMainThread(SlowFallPacket::handle)
                 .add();
     }
 }

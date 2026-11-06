@@ -5,7 +5,6 @@ import com.hoppabootsmod.item.ModItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.TickEvent;
@@ -62,7 +61,7 @@ public class ClientDoubleJumpHandler {
         // Trigger only if it is the second time the player hits the jump key
         if (canDoubleJump && jumpPressed && jumpWasReleased) {
             Vec3 motion = player.getDeltaMovement();
-            player.setDeltaMovement(motion.x, 0.8, motion.z);
+            player.setDeltaMovement(motion.x, 0.525, motion.z);
             player.hasImpulse = true;
             player.fallDistance = 0; // This only works for client-side, but we leave it here for data consistency
             ModEvents.CHANNEL.send(new ModEvents.ResetFallPacket(),  // server-side copy
