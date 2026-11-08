@@ -45,6 +45,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         basicItem(ModItems.REFINED_ALUMINUM.get());
         basicItem(ModItems.RAW_ALUMINUM.get());
+        basicItem(ModItems.WIND_CARTRIDGE.get());
 
         trimmedArmorItem(ModItems.HOP_BOOTS);
         trimmedArmorItem(ModItems.HOPPA_BOOTS);
